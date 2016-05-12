@@ -1,2 +1,6 @@
 node_modules
-zPyramus
+data
+.DS_Store
+public
+config.js
+/data
