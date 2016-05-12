@@ -5,7 +5,7 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,600,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/normalize.css">
-    <!-- link(rel="stylesheet", href="/stylesheets/skeleton.css")-->
+    <!-- <link rel=""stylesheet", href="/stylesheets/skeleton.css">-->
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react-with-addons.min.js"></script>
