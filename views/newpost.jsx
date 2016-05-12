@@ -3,7 +3,7 @@
   <label for="title">Title</label>
   <input type="text" name="title" required="true" placeholder="Title..."/><br/>
   <label for="category">Category</label>
-  <input type="text" name="category" required="true"/><br/> <!-- Change to Dropdown with fixed selections --> 
+  <input type="text" name="category" required="true"/><br/> <!-- Change to Dropdown with fixed selections -->
   <input type="submit" value="Submit" class="button button-primary"/>
 </form>
 
@@ -14,7 +14,7 @@
 //         h2 Submit a new text post
 //     else
 //         h2 Submit a new link post
-//     form(name="newpost", action= "/r/" + subpy + "/submit", method="post")
+//     form(name="newpost", action= "/r/" + category + "/submit", method="post")
 //         label(for="title") Title
 //         input(type="text", name="title", required="true", placeholder="Title...")
 //         br
@@ -23,7 +23,7 @@
 //         else
 //             label(for="link") Link
 //             input(type="text", name="link", required="true", placeholder="URL...")
-//         label(for="subpy") Subpy
-//         input(type="text", name="subpy", required="true", value=subpy)
+//         label(for="category") category
+//         input(type="text", name="category", required="true", value=category)
 //         br
 //         input.button.button-primary(type="submit", value="Submit")
