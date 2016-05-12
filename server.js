@@ -10,21 +10,32 @@
 	var mongoose = require("mongoose");
 	var passport = require('passport');
 	var uuid = require('node-uuid');
-	
+
 	mongoose.connect("mongodb://localhost");
 
 	var app = express();
 
 	app.use(bodyParser.json());
-	app.use(bodyParser.urlencoded({extended: true}));
+	app.use(bodyParser.urlencoded({
+		extended: true
+	}));
 	app.use(cookieParser());
-	app.use(expressSession({secret: "THISISTHESECRET", resave: true, saveUninitialized: true}));
+	app.use(expressSession({
+		secret: "THISISTHESECRET",
+		resave: true,
+		saveUninitialized: true
+	}));
+
+	require('./passport.js')(passport);
+
+	app.use(passport.initialize());
+	app.use(passport.session());
 
 	app.get("/", function (req, res) {
 		res.sendFile(__dirname + "/public/index.html");
 	});
-	
-	
+
+
 	app.use(express.static('public'));
 
 	app.use(function (req, res, next) {
