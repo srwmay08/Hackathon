@@ -11,6 +11,17 @@
 	var passport = require('passport');
 	var uuid = require('node-uuid');
 
+	// Routes
+	var indexRouter = require('./routes/index');
+//	var localAuthRouter = require('./routes/local-auth');
+//	var postsRouter = require('./routes/posts');
+//	var rRouter = require('./routes/r');
+//	var submitRouter = require('./routes/submit');
+//	var uRouter = require('./routes/u');
+//	var subpylistRouter = require('./routes/subpylist');
+//	var commentsRouter = require('./routes/comments');
+	
+	
 	mongoose.connect("mongodb://localhost");
 
 	var app = express();
@@ -31,9 +42,15 @@
 	app.use(passport.initialize());
 	app.use(passport.session());
 
-	app.get("/", function (req, res) {
-		res.sendFile(__dirname + "/public/index.html");
-	});
+	// use routes
+	app.use('/', indexRouter);
+	//	app.use('/', localAuthRouter);
+	//	app.use('/r', rRouter);
+	//	app.use('/r', submitRouter);
+	//	app.use('/u', uRouter);
+	//	app.use('/posts', postsRouter);
+	//	app.use('/subpylist', subpylistRouter);
+	//	app.use('/comments', commentsRouter);
 
 
 	app.use(express.static('public'));
