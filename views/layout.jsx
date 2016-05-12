@@ -21,6 +21,6 @@
     </div>
     <div id="content">
     </div>
-    <script src="/build/SubpyFiller.bundle.js"></script>
+    <script src="/build/categoryFiller.bundle.js"></script>
   </body>
 </html>

@@ -8,6 +8,6 @@
 //
 // block content
 //     h1
-//         a(href='/r/' + subpy)#subpy= subpy
+//         a(href='/r/' + category)#category= category
 //     div#react-comment-app-mount
 //     script#comment-thread-script(src='/build/CommentThreadApp.bundle.js', postId= postId)
